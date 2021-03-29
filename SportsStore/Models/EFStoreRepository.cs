@@ -16,5 +16,21 @@ namespace SportsStore.Models
             this.context = context;
         }
 
+        public void SaveProduct(Product prod)
+        {
+            context.SaveChanges();
+        }
+
+        public void CreateProduct(Product prod)
+        {
+            context.Add(prod);
+            context.SaveChanges();
+        }
+
+        public void DeleteProduct(Product prod)
+        {
+            context.Remove(prod);
+            context.SaveChanges();
+        }
     }
 }
